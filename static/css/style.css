@@ -1,0 +1,75 @@
+/* Custom Styles for Lee Kuan Yew Chatbot */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-outfit {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Custom scrollbar for Chat Feed */
+.scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.15);
+    border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.3);
+}
+
+/* Markdown prose styles inside message bubbles */
+.prose p {
+    margin-bottom: 0.75rem;
+}
+.prose p:last-child {
+    margin-bottom: 0;
+}
+.prose ul, .prose ol {
+    margin-left: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+.prose li {
+    list-style-type: disc;
+    margin-bottom: 0.25rem;
+}
+.prose blockquote {
+    border-left: 3px solid #b45309;
+    padding-left: 0.75rem;
+    color: #94a3b8;
+    font-style: italic;
+    margin: 0.75rem 0;
+}
+
+/* Smooth active theme button */
+.theme-btn.active {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+    border-left: 3px solid #d97706;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Animations */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-animate {
+    animation: slideInUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
